@@ -20,7 +20,7 @@ CREATE TABLE [DB_PROJETO_ACADEMIA].[dbo].[TB_PESSOAS]
 
 CREATE TABLE [DB_PROJETO_ACADEMIA].[dbo].[TB_PLANOS]
 (
- [cd_plano] int NOT NULL ,
+ [cd_plano] int IDENTITY(1, 1),
  [nm_plano] varchar(45) NOT NULL ,
  [vl_plano] money NOT NULL ,
 
@@ -31,7 +31,7 @@ GO
 
 CREATE TABLE [DB_PROJETO_ACADEMIA].[dbo].[TB_ALUNOS]
 (
- [matricula]  int NOT NULL ,
+ [matricula]  int IDENTITY(1, 1),
  [bool_ativo] bit NOT NULL ,
  [vl_cpf]     bigint NOT NULL ,
  [cd_plano]   int NOT NULL ,
@@ -58,7 +58,7 @@ CREATE NONCLUSTERED INDEX [fkIdx_28] ON [DB_PROJETO_ACADEMIA].[dbo].[TB_ALUNOS]
 
 CREATE TABLE [DB_PROJETO_ACADEMIA].[dbo].[TB_COBRANCA]
 (
- [cd_cobranca]   bigint NOT NULL ,
+ [cd_cobranca]   bigint IDENTITY(1, 1),
  [dt_vencimento] date NOT NULL ,
  [vl_cobranca]   money NOT NULL ,
  [cd_plano]      int NOT NULL ,
@@ -88,7 +88,7 @@ GO
 
 CREATE TABLE [DB_PROJETO_ACADEMIA].[dbo].[TB_PAGAMENTOS]
 (
- [cd_pagamento]  bigint NOT NULL ,
+ [cd_pagamento]  bigint IDENTITY(1, 1),
  [dt_pagamento]  date NOT NULL ,
  [dt_vencimento] date NOT NULL ,
  [vl_pagamento]  money NOT NULL ,
@@ -119,7 +119,7 @@ GO
 
 CREATE TABLE [DB_PROJETO_ACADEMIA].[dbo].[TB_EXERCICIOS]
 (
- [cd_exercicio] int NOT NULL ,
+ [cd_exercicio] int IDENTITY(1, 1),
  [nm_exercicio] varchar(100) NOT NULL ,
 
 
@@ -156,7 +156,7 @@ GO
 
 CREATE TABLE [DB_PROJETO_ACADEMIA].[dbo].[TB_CARGOS]
 (
- [cd_cargo] int NOT NULL ,
+ [cd_cargo] int IDENTITY(1, 1),
  [nm_cargo] varchar(100) NOT NULL ,
 
 
