@@ -1,4 +1,4 @@
-package Usuarios;
+package Models;
 
 public class ExerciciosModel {
 

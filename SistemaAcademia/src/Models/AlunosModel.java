@@ -1,4 +1,4 @@
-package Usuarios;
+package Models;
 
 public class AlunosModel extends PessoasModel {
 

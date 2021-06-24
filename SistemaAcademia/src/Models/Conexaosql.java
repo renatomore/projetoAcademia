@@ -1,4 +1,4 @@
-package Usuarios;
+package Models;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -22,8 +22,8 @@ public class Conexaosql {
 		try(Connection connection = DriverManager.getConnection(ConnectionUrl);
 				Statement statement = connection.createStatement();)
 		{
-			String selectSql = "INSERT INTO DB_PROJETO_ACADEMIA.dbo.TB_EXERCICIOS "
-					+ "(cd_exercicio, nm_exercicio) VALUES (2, 'Agachamento com o cool');";
+			String selectSql = "INSERT INTO DB_PROJETO_ACADEMIA.dbo.TB_EXERCICIOS (cd_exercicio, nm_exercicio)"
+					+ " VALUES (1, 'Levantamento de piroca');";
 		}
 		catch(SQLException e)
 		{
