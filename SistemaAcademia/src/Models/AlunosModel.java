@@ -1,5 +1,9 @@
 package Models;
 
+import java.util.List;
+
+import Aluno.ListarExercicios;
+
 public class AlunosModel extends PessoasModel {
 
 	public int Matricula;
@@ -14,7 +18,7 @@ public class AlunosModel extends PessoasModel {
 		
 	public int Ativo;
 
-	public int isAtivo() {
+	public int getAtivo() {
 		return Ativo;
 	}
 	
@@ -22,5 +26,17 @@ public class AlunosModel extends PessoasModel {
 		this.Ativo = ativo;
 	}
 	
+	public List<ExerciciosAlunosModel> ListaDeExercicios;
 	
+	public List<ExerciciosAlunosModel> getListaDeExercicios()
+	{
+		return ListaDeExercicios;
+	}
+	
+	public void setListaDeExercicios(List<ExerciciosAlunosModel> listaDeExercicios)
+	{
+		ListarExercicios listarExercicios = new ListarExercicios();
+		listaDeExercicios = listarExercicios.ListaDeExercicios(Matricula);		
+		this.ListaDeExercicios = listaDeExercicios;
+	}
 }
